@@ -12,6 +12,7 @@ def create_chocolate_bar(rader, kolumner):
     return matris
 
 def print_chocolate_bar(matris):
+    print("\n", end="")
     for i in range(len(matris)):
         rad = matris[i]
         for j in range(len(rad)):
@@ -57,7 +58,6 @@ def run_game():
         print_chocolate_bar(_matris)
         _rad, _kolumn = ask_cell_number(_matris)
         _matris = chomp(_matris, _rad, _kolumn)
-        print("")
     print_chocolate_bar(_matris)
     print("\nspelare", ((turn_count % 2 == 0) and "1" or "2"), "vann!")
         
