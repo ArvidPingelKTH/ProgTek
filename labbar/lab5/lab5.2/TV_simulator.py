@@ -11,7 +11,7 @@ def read_file(file_name):
             tv = TV(line[0], int(line[4]), int(line[1]), int(line[3]), int(line[2]))
             tv_list.append(tv)
         file.close()
-    except FileNotFoundError:
+    except:
         print("File not found")
     return tv_list
 
@@ -22,7 +22,7 @@ def write_file(tv_list, file_name):
         for tv in tv_list:
             file.write(tv.str_for_file())
         file.close()
-    except FileNotFoundError:
+    except:
         print("File not found")
 
 def select_TV_menu(tv_list):
